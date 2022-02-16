@@ -10,7 +10,7 @@ import lombok.Data;
 @Entity
 @Data
 @AllArgsConstructor // construtor com todos os parametros
-@
+
 public class Car {
     Long id;
     String brand;
