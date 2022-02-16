@@ -1,17 +1,21 @@
 package com.javaparainiciantes.boot.restapicrudexample;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
-import lombok.Data; 
-
-// o Car vai ser uma "Entity" do JPA porque ele vai ser salvo no banco
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@AllArgsConstructor // construtor com todos os parametros
-
+@AllArgsConstructor
+@NoArgsConstructor
 public class Car {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     String brand;
     String model;
